@@ -1,13 +1,16 @@
 ![Laravel Wallet](./images/yos-laravel-wallet.svg)
+
 <p align="center">
 
 [![Laravel Unit Test](https://github.com/Yemeni-Open-Source/laravel-wallet/actions/workflows/laravel-unit-test.yml/badge.svg)](https://github.com/Yemeni-Open-Source/laravel-wallet/actions/workflows/laravel-unit-test.yml)
 
-<a href="https://packagist.com/packages/Yemeni-Open-Source/laravel-wallet"><img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/Yemeni-Open-Source/laravel-wallet?color=blue&logoColor=white"></a>
-<a href="https://packagist.com/packages/Yemeni-Open-Source/laravel-wallet"><img alt="Latest Packagist Version" src="https://img.shields.io/packagist/v/Yemeni-Open-Source/laravel-wallet?color=success&label=version&logo=packagist&logoColor=white"></a>
-<a href="https://github.com/Yemeni-Open-Source/laravel-wallet/blob/develop/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Yemeni-Open-Source/laravel-wallet?color=blueviolet"></a>
-</p>
+![Packagist Downloads](https://img.shields.io/packagist/dt/Yemeni-Open-Source/laravel-wallet?color=blue&label=downloads&logo=packagist&logoColor=white)
 
+![Packagist Version](https://img.shields.io/packagist/v/Yemeni%20Open%20Source/laravel-wallet?color=success&label=version&logo=laravel&logoColor=white)
+
+![GitHub](https://img.shields.io/github/license/Yemeni-Open-Source/laravel-wallet?logo=Open%20Source%20Initiative&logoColor=white&color=blueviolet)
+
+</p>
 
 # Laravel Wallet
 
