@@ -3,11 +3,8 @@
 <p align="center">
 
 [![Laravel Unit Test](https://github.com/Yemeni-Open-Source/laravel-wallet/actions/workflows/laravel-unit-test.yml/badge.svg)](https://github.com/Yemeni-Open-Source/laravel-wallet/actions/workflows/laravel-unit-test.yml)
-
 ![Packagist Downloads](https://img.shields.io/packagist/dt/Yemeni-Open-Source/laravel-wallet?color=blue&label=downloads&logo=packagist&logoColor=white)
-
 ![Packagist Version](https://img.shields.io/packagist/v/Yemeni%20Open%20Source/laravel-wallet?color=success&label=version&logo=laravel&logoColor=white)
-
 ![GitHub](https://img.shields.io/github/license/Yemeni-Open-Source/laravel-wallet?logo=Open%20Source%20Initiative&logoColor=white&color=blueviolet)
 
 </p>
