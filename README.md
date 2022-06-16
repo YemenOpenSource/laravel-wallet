@@ -17,4 +17,4 @@ Laravel wallet is a package with expressive pronounced syntax that provide top-n
 
 ## Credits
 
-The MIT License (MIT). Please see [MIT license](LICENSE.md) File for more information.
+The MIT License (MIT). Please see [MIT license](LICENSE) File for more information.
