@@ -190,4 +190,9 @@ class Wallet extends Model
         }
         return $balance;
     }
+
+    protected static function newFactory()
+    {
+        return \YemeniOpenSource\LaravelWallet\Database\Factories\WalletFactory::new();
+    }
 }
