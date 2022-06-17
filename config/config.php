@@ -1,6 +1,4 @@
 <?php
-use YemeniOpenSource\LaravelWallet\Models\Wallet;
-use YemeniOpenSource\LaravelWallet\Models\Transaction;
 
 return [
     /*
@@ -36,4 +34,16 @@ return [
     |
     */
     'subtracting_transaction_types' => ['withdraw', 'payout'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Activate automatic recalculation
+    |--------------------------------------------------------------------------
+    |
+    | This value is to activate recalculation of the wallet balance job which
+    | will recalculate the balance of the wallet from the transaction history
+    | after wallet balance has changed to ensure correct value.
+    |
+    */
+    'auto_recalculate_balance' => env('WALLET_AUTO_RECALCULATE_BALANCE', false),
 ];
