@@ -29,7 +29,6 @@
             "email": "muath.ye@gmail.com"
         }
     ],
-    "require": {},
     "extra": {
         "laravel": {
             "providers": [
@@ -42,5 +41,8 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit tests --colors=always --verbose --testdox"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
