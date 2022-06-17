@@ -1,6 +1,6 @@
 <?php
-use YemeniOpenSource\LaravelWallet\Models\Wallet;
-use YemeniOpenSource\LaravelWallet\Models\Transaction;
+use YemeniOpenSource\\LaravelWallet\\Models\\Wallet;
+use YemeniOpenSource\\LaravelWallet\\Models\\Transaction;
 
 return [
     /*
@@ -15,15 +15,25 @@ return [
     */
     'prefix' => 'lw_',
 
-    /**
-     * Transaction types that are added from the wallet balance.
-     * All amounts will be converted to a positive value
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Added Transactions
+    |--------------------------------------------------------------------------
+    |
+    | This value is for transaction types that are added from the wallet
+    | balance. All amounts will be converted to a positive value.
+    |
+    */
     'adding_transaction_types' => ['deposit', 'refund'],
 
-    /**
-     * Transaction types that are subtracted from the wallet balance.
-     * All amounts will be converted to a negative value
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Added Transactions
+    |--------------------------------------------------------------------------
+    |
+    | This value is for transaction types that are subtracted from the wallet
+    | balance. All amounts will be converted to a negative value.
+    |
+    */
     'subtracting_transaction_types' => ['withdraw', 'payout'],
 ];
