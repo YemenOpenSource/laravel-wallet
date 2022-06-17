@@ -19,6 +19,15 @@ class Wallet extends Model
         'balance' => 0,
     ];
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    // protected $fillable = [
+    //     'balance',
+    // ];
+
     protected $casts = [
         'meta' => 'array',
         'amount' => 'float',
@@ -27,10 +36,13 @@ class Wallet extends Model
     /**
      * Create a new Eloquent model instance.
      *
+     * @param  array  $attributes
      * @return void
      */
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
+        parent::__construct($attributes);
+
         $prefix = config('wallet.prefix');
 
         $this->setTable($prefix . $this->table);
