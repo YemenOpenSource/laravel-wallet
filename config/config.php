@@ -3,15 +3,17 @@ use YemeniOpenSource\LaravelWallet\Models\Wallet;
 use YemeniOpenSource\LaravelWallet\Models\Transaction;
 
 return [
-    /**
-     * Change this if you need to modify the default Wallet Model name.
-     */
-    'wallet_model' => Wallet::class,
-
-    /**
-     * Change this if you need to modify the default Transaction Model name.
-     */
-    'transaction_model' => Transaction::class,
+    /*
+    |--------------------------------------------------------------------------
+    | Prefix
+    |--------------------------------------------------------------------------
+    |
+    | This value is the prefix value of your wallet tables. This value should
+    | changed before migrating the database. Laravel Wallet models uses this 
+    | prefix.
+    |
+    */
+    'prefix' => 'lw_',
 
     /**
      * Transaction types that are added from the wallet balance.
