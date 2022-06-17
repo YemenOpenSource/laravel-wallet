@@ -1,0 +1,46 @@
+{
+    "name": "yemeni-open-source/laravel-wallet",
+    "description": "Laravel wallet is a package with expressive pronounced syntax that provide top-notch development covering deposits, withdrawals, transactions and balances all quite simply.",
+    "keywords": [
+        "yemeni-open-source",
+        "laravel-wallet",
+        "virtual",
+        "currency",
+        "credits",
+        "wallet",
+        "payment"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "YemeniOpenSource\\LaravelWallet\\": "src/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YemeniOpenSource\\LaravelWallet\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "muathye",
+            "email": "muath.ye@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YemeniOpenSource\\LaravelWallet\\WalletServiceProvider"
+            ],
+            "aliases": {
+                "Wallet": "YemeniOpenSource\\LaravelWallet\\Facades\\WalletFacade"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests --colors=always --verbose --testdox"
+    }
+}
