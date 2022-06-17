@@ -14,7 +14,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "YemeniOpenSource\\LaravelWallet\\": "src/"
+            "YemeniOpenSource\\LaravelWallet\\": "src/",
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
