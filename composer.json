@@ -15,7 +15,8 @@
     "autoload": {
         "psr-4": {
             "YemeniOpenSource\\LaravelWallet\\": "src/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "YemeniOpenSource\\LaravelWallet\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
@@ -29,7 +30,6 @@
             "email": "muath.ye@gmail.com"
         }
     ],
-    "require": {},
     "extra": {
         "laravel": {
             "providers": [
@@ -41,6 +41,12 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit tests --colors=always --verbose --testdox"
+        "test": "vendor/bin/phpunit tests --colors=always --verbose --testdox",
+        "test-f": "vendor/bin/phpunit --colors=always --verbose --testdox --filter"
+    },
+    "require-dev": {
+        "illuminate/testing": "^8.83",
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.24"
     }
 }
