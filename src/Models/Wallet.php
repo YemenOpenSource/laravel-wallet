@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Muathye\Wallet\Exceptions\UnacceptedTransactionException;
+use YemeniOpenSource\LaravelWallet\Services\WalletService;
 
 class Wallet extends Model
 {
@@ -184,17 +185,14 @@ class Wallet extends Model
      */
     public function actualBalance(bool $save = false)
     {
-        $undefined = $this->transactions()
-            ->whereNotIn('type', \Wallet::biasedTransactionTypes())
-            ->sum('amount');
         $credits = $this->transactions()
-            ->whereIn('type', \Wallet::addingTransactionTypes())
+            ->whereIn('type', WalletService::addingTransactionTypes())
             ->sum(\DB::raw('abs(amount)'));
 
         $debits = $this->transactions()
-            ->whereIn('type', \Wallet::subtractingTransactionTypes())
+            ->whereIn('type', WalletService::subtractingTransactionTypes())
             ->sum(\DB::raw('abs(amount)'));
-        $balance = $undefined + $credits - $debits;
+        $balance = $credits - $debits;
 
         if ($save) {
             $this->balance = $balance;
