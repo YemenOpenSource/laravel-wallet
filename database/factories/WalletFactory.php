@@ -12,7 +12,7 @@ class WalletFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'balance' => mt_rand(11, 999999) / 1000,
         ];
     }
 }
