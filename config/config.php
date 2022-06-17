@@ -1,6 +1,6 @@
 <?php
-use YemeniOpenSource\\LaravelWallet\\Models\\Wallet;
-use YemeniOpenSource\\LaravelWallet\\Models\\Transaction;
+use YemeniOpenSource\LaravelWallet\Models\Wallet;
+use YemeniOpenSource\LaravelWallet\Models\Transaction;
 
 return [
     /*
