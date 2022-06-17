@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
+use YemeniOpenSource\LaravelWallet\Services\WalletService;
 
 class Transaction extends Model
 {
@@ -30,10 +31,12 @@ class Transaction extends Model
     /**
      * Create a new Eloquent model instance.
      *
+     * @param  array  $attributes
      * @return void
      */
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
+        parent::__construct($attributes);
         $prefix = config('wallet.prefix');
 
         $this->setTable($prefix . $this->table);
@@ -118,8 +121,8 @@ class Transaction extends Model
     public function shouldConvertToAbsoluteAmount($type = null)
     {
         $type = $type ?: $this->type;
-        return in_array($type, \Wallet::subtractingTransactionTypes()) ||
-            in_array($type, \Wallet::addingTransactionTypes());
+        return in_array($type, WalletService::subtractingTransactionTypes()) ||
+            in_array($type, WalletService::addingTransactionTypes());
     }
 
     public function getTotalAmount()
@@ -138,13 +141,13 @@ class Transaction extends Model
             function ($type) {
                 return "'{$type}'";
             },
-            \Wallet::subtractingTransactionTypes()
+            WalletService::subtractingTransactionTypes()
         ));
         $addingTypes = implode(',', array_map(
             function ($type) {
                 return "'{$type}'";
             },
-            \Wallet::addingTransactionTypes()
+            WalletService::addingTransactionTypes()
         ));
         return "CASE
                 WHEN {$table}.type
