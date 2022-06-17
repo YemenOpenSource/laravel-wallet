@@ -3,6 +3,11 @@
 namespace YemeniOpenSource\LaravelWallet;
 
 use Illuminate\Support\ServiceProvider;
+use YemeniOpenSource\LaravelWallet\Models\Transaction;
+use YemeniOpenSource\LaravelWallet\Models\Wallet;
+use YemeniOpenSource\LaravelWallet\Observers\TransactionObserver;
+use YemeniOpenSource\LaravelWallet\Observers\WalletObserver;
+use YemeniOpenSource\LaravelWallet\Services\WalletService;
 
 class WalletServiceProvider extends ServiceProvider
 {
@@ -22,6 +27,9 @@ class WalletServiceProvider extends ServiceProvider
         }
 
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        (Wallet::class)::observe(WalletObserver::class);
+        (Transaction::class)::observe(TransactionObserver::class);
     }
 
     /**
@@ -30,5 +38,9 @@ class WalletServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'wallet');
+
+        $this->app->singleton('wallet', function () {
+            return new WalletService;
+        });
     }
 }
