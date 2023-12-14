@@ -32,7 +32,7 @@ This package is tested with Laravel v8 it my not work on Laravel v7 or v6 or v5
 Install the package by using composer:
 
 ```sh
-composer require yemeni-open-source/laravel-wallet
+composer require yemenopensource/laravel-wallet
 ```
 
 ## Configure Your Needs
