@@ -11,7 +11,7 @@ return [
     | prefix.
     |
     */
-    'prefix' => 'lw_',
+    'prefix' => 'yos_lw_',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | balance. All amounts will be converted to a positive value.
     |
     */
-    'adding_transaction_types' => ['deposit', 'refund'],
+    'adding_transaction_types' => ['deposit', 'refund', 'received'],
 
     /*
     |--------------------------------------------------------------------------

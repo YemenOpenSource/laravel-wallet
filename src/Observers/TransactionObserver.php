@@ -2,11 +2,13 @@
 
 namespace YemeniOpenSource\LaravelWallet\Observers;
 
+use Illuminate\Support\Str;
+
 class TransactionObserver
 {
     public function creating($transaction)
     {
-        $transaction->hash = uniqid();
+        $transaction->hash = uniqid(Str::uuid().'-');
     }
 
     public function created($transaction)

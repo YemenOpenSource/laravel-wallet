@@ -17,40 +17,49 @@ Laravel wallet is a package with expressive pronounced syntax that provide top-n
 
 This package is tested with Laravel v8 it my not work on Laravel v7 or v6 or v5
 
-|||
+|Software|Version|
 |-|-|
-|php| ^7.3&#124;^8.0|
-|Composer| ^2.3|
-|Laravel| ^8.0|
+| php | ^7.3 &#124; ^8.0 &#124; ^8.1 &#124; ^8.2 |
+| Composer | ^2.3 |
+| Laravel | ^8.0 &#124; ^9.0 &#124; ^10.0 |
 
 ## Installation
 
 Install the package by using composer:
 
-> ```composer require yemeni-open-source/laravel-wallet```
+```sh
+composer require yemeni-open-source/laravel-wallet
+```
 
 ## Configure Your Needs
 
 You can scape this step if you want to use default configuration, but you can publish wallet configuration by running:
 
-> ```php artisan vendor:publish --provider="YemeniOpenSource\LaravelWallet\WalletServiceProvider" --tag=config```
+```sh
+php artisan vendor:publish --provider="YemeniOpenSource\LaravelWallet\WalletServiceProvider" --tag=config
+```
 
 This will merge the ```config/wallet.php``` config file to your root ```config``` directory. You are free to modify it before migrating the database.
+
 ## Database Migrations
 
-After successfull installation migrate the wallet tables
+After that install the wallet tables
 
-> ```php artisan migrate```
+```sh
+php artisan migrate
+```
 
 If you want to add your customization, publish the migrations:
 
-> ```php artisan vendor:publish --provider="YemeniOpenSource\LaravelWallet\WalletServiceProvider" --tag=migrations```
+```sh
+php artisan vendor:publish --provider="YemeniOpenSource\LaravelWallet\WalletServiceProvider" --tag=migrations
+```
 
 Laravel will use the publish migrations at ```database/migrations```.
 
 ## Setup
 
-Add the ```HasWallet``` trait to any model which you want to add wallet functionality, for example ```User``` model.
+Add the ```HasWallet``` trait to any model which you want to add the wallet functionality of it, for example ```User``` model.
 
 ```php
 use YemeniOpenSource\LaravelWallet\Traits\HasWallet;
@@ -59,7 +68,7 @@ class User extends Model
 {
     use HasWallet;
 
-    ...
+    //...
 }
 ```
 
@@ -92,12 +101,13 @@ $user->wallet->balance; // -24.8990
 
 ## Advanced Usage
 
-You can easily add meta information to the transactions to suit your needs.
+You can easily add meta information to the transactions to suit your needs. For example:
 
 ```php
 $user = User::first();
 $user->wallet->deposit(100, ['currency' => 'USD', 'bank' => 'TEST BANK']);
 $user->wallet->withdraw(64, ['currency' => 'USD', 'description' => 'Purchase of Item #101']);
+$user->wallet->withdraw(64, ['currency' => 'USD', 'transfer' => 'Western union tracking number #101']);
 ```
 
 ## Credits

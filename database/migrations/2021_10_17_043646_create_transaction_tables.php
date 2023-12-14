@@ -20,8 +20,8 @@ class CreateTransactionTables extends Migration
                 $table->increments('id');
                 $table->unsignedBigInteger('wallet_id');
                 $table->decimal('amount', 12, 4)->comment('dollar.cents');
-                $table->string('hash', 60)->comment('unique for each transaction');
-                $table->enum('type', [config('wallet.adding_transaction_types'), config('wallet.subtracting_transaction_types')])->comment('deposite, withdraw or any configured type');
+                $table->string('hash', 60)->comment('uniqid+uuid for a unique hash for each transaction.');
+                $table->enum('type', [config('wallet.adding_transaction_types'), config('wallet.subtracting_transaction_types')])->comment('deposit, withdraw or any configured type');
                 $table->json('meta')->nullable()->comment('any description');
                 $table->timestamps();
                 $table->softDeletes();

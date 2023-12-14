@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -30,7 +31,7 @@ class UpdateWalletTransactionsTable extends Migration
     {
         $prefix = config('wallet.prefix');
 
-        if (\DB::getDriverName() !== 'sqlite') {
+        if (DB::getDriverName() !== 'sqlite') {
             Schema::table($prefix . 'transactions', function (Blueprint $table) {
                 $table->dropForeign(['origin_id']);
             });
