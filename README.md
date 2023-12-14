@@ -1,3 +1,5 @@
+[![Stand With Palestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/banner-no-action.svg)](https://TheBSD.github.io/StandWithPalestine/)
+
 ![Laravel Wallet](./images/yos-laravel-wallet.svg)
 
 <div style="text-align: center;">
@@ -6,6 +8,8 @@
 ![Packagist Downloads](https://img.shields.io/packagist/dt/Yemeni-Open-Source/laravel-wallet?color=blue&label=Downloads&logo=packagist&logoColor=white)
 ![Packagist Version](https://img.shields.io/packagist/v/Yemeni-Open-Source/laravel-wallet?color=green&label=Version&logo=laravel&logoColor=white)
 ![GitHub](https://img.shields.io/github/license/Yemeni-Open-Source/laravel-wallet?logo=Open%20Source%20Initiative&label=License&logoColor=white&color=blueviolet)
+[![StandWithPalestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg)](https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md)
+
 
 </div>
 
