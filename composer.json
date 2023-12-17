@@ -2,13 +2,15 @@
     "name": "yemenopensource/laravel-wallet",
     "description": "Laravel wallet is a package with expressive pronounced syntax that provide top-notch development covering deposits, withdrawals, transactions and balances all quite simply.",
     "keywords": [
-        "yemeni-open-source",
+        "yemenopensource",
+        "yos",
         "laravel-wallet",
         "virtual",
         "currency",
         "credits",
         "wallet",
-        "payment"
+        "payment",
+        "muath-ye"
     ],
     "type": "library",
     "license": "MIT",

@@ -4,17 +4,17 @@ namespace YemeniOpenSource\LaravelWallet\Services;
 
 class WalletService
 {
-    public function addingTransactionTypes()
+    public static function addingTransactionTypes()
     {
         return config('wallet.adding_transaction_types', []);
     }
 
-    public function subtractingTransactionTypes()
+    public static function subtractingTransactionTypes()
     {
         return config('wallet.subtracting_transaction_types', []);
     }
 
-    public function autoRecalculationActive()
+    public static function autoRecalculationActive()
     {
         return config('auto_recalculate_balance', false);
     }
