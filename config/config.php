@@ -46,4 +46,18 @@ return [
     |
     */
     'auto_recalculate_balance' => env('WALLET_AUTO_RECALCULATE_BALANCE', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Throwing Exception for Insufficient Balance
+    |--------------------------------------------------------------------------
+    |
+    | This value is to disable exception handling when the request withdraw
+    | amount is greater than current user balance on his wallet, if you
+    | disabled the exception handling, the withdraw process will not proceeded
+    | and the return will be false the balance will stay as is. default value
+    | is false.
+    |
+    */
+    'disable_insufficient_exception' => env('WALLET_DISABLE_INSUFFICIENT_EXCEPTION', false),
 ];

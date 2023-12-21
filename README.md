@@ -103,6 +103,8 @@ $user->wallet->forceWithdraw(500);
 $user->wallet->balance; // -24.8990
 ```
 
+> If you don't want [UnacceptedTransactionException] you can change the `wallet.disable_insufficient_exception` config value to disable the exception or set `WALLET_DISABLE_INSUFFICIENT_EXCEPTION` to `true` on your `.env`
+
 ## Advanced Usage
 
 You can easily add meta information to the transactions to suit your needs. For example:

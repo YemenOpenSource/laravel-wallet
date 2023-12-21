@@ -132,7 +132,11 @@ class Wallet extends Model
             ]);
 
         if (!$accepted) {
-            throw new UnacceptedTransactionException($transaction, 'Withdrawal not accepted due to insufficient funds!');
+            return config('wallet.disable_insufficient_exception')
+                ? false
+                : throw new UnacceptedTransactionException(
+                    $transaction, 'Withdrawal not accepted due to insufficient funds!'
+                );
         }
         $this->refresh();
         return $transaction;
